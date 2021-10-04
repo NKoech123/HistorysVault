@@ -15,8 +15,6 @@ showElement = (element) => element.style.display = 'block';
 const init = async () => {
     hideElement(userInfo);
     hideElement(userProfileButton);
-
-    
 }
 
 initUser = async () => {
