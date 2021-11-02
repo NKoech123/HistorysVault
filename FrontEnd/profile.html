@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History's Vault User Profile</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="profile.css">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+ 
+
+ <!-- Script to display User name on profile page-->
+  <script>  
+
+     
+   async function getUsers() {    
+        const query = new Moralis.Query("User");  //querying about User
+        const users = await query.find({}, {name: 1} );    //Find the name of the logged in user
+        console.log(users);
+        var name=console.log(users)
+        var username="@Zouvier"
+
+        document.getElementById("name").innerHTML=name;
+        document.getElementById("username").innerHTML=username;
+
+    }
+
+  </script>
+</head>
+<body  onload="getUsers()">
+ 
+   
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+            <!-- Kebab Menu -->
+            <div class="dropdown">
+                <button>Menu</button>
+                <div class="dropdown-content">
+                <a href=#>Profile</a>
+                <a href= "#">Settings</a>
+        
+                </div>
+              </div>
+
+
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="">
+           
+        </a>
+       
+        <!-- Profile Image -->
+        <div class="profile">
+        
+            <div class="profile-img">
+                <img src="img/profile.jpg" alt="">
+                
+            </div>
+
+            <div class="name">
+                <h1> <span id="name"> </span></h1>  
+          
+                <img src="img/verify.png" alt="">
+            </div>
+            
+            <div class="username">
+                <p1 id="username"> </p1>
+            </div>
+                  
+
+           
+        </div>
+
+       
+
+         
+
+        <!-- About -->
+        <div class="about">
+            <!-- Box 1 -->
+            <div class="box">
+                <h3>0</h3>
+                <span>NFTs</span>
+            </div>
+             <!-- Box 2 -->
+             <div class="box">
+                <h3>0</h3>
+                <span>Followers</span>
+            </div>
+             <!-- Box 3 -->
+             <div class="box">
+                <h3>0</h3>
+                <span>Following</span>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu">
+           
+            <!-- Bio Information -->
+             <div class="bio">
+                 
+                 <input style="height:100px;font-size:18pt;" .....>
+                 </div>
+
+
+             </section>
+ 
+ 
+
+            <a href="#">
+                <span class="icon">
+                    <i class="ri-logout-box-r-line"></i>
+                </span>
+                Logout
+            </a>
+        </div>
+    </div>
+    <!-- Main Home -->
+    <div class="main-home">
+        <!-- Header -->
+        <div class="header">
+            <!-- Nothing goes in here.Shift "Search" to the right-->
+            <div >
+                
+            </div>
+            <!-- Search -->
+            <div class="search">
+                <i class="ri-search-line"></i>
+                <input type="text" placeholder="Search">
+            </div>
+
+            
+        </div>
+ 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis@0.0.42/dist/moralis.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+
+    <script type="text/javascript" src="profile.js"></script>
+    <script type="text/javascript" src="index.html"></script>
+</body>
+</html>

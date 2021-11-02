@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Registration User Form</title>
+</head>
+<body>
+    
+    
+    <div>
+        <!-- buttons-->
+        <button id="btn_connect">Connect wallet</button>
+
+        <button id="btn_user_info">Fill User Form</button>
+        
+
+        
+    </div>
+
+    <div id="userInfo">
+        <h4>User Information</h4>
+        <input type="text" id='txtname' required placeholder="Enter Name">
+        <input type="text" id='txtemail' required placeholder="Enter Email">
+        <input type="text" id="txtUsername" required placeholder="Enter Username">
+        <input type="text" id="txtUserBio" required placeholder="Enter Bio">
+        <input type="text" id="txttwitterurl" required placeholder="Enter twitter URL">
+        <input type="text" id="txtFacebookurl" required placeholder="Enter Facebook URL">
+        <input type="text" id="txtPinteresturl" required placeholder="Enter Pinterest URL">
+       
+
+        <small>Optional</small>
+
+        <img src="" id="imgAvatar" alt="" width="50" height="50">
+        <label for="fileAvatar">Select Image</label>
+        <input type="file" id="fileAvatar">
+
+        <button id="btn_saveUserInfo">Save</button>
+        <button id="btn_logout">log out</button>
+        <button id="btn_closeUserInfo">Close</button>
+        <a href="profile.html"> <button>Go to User Profile</button> </a>
+    </div>
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis@0.0.42/dist/moralis.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    
+</body>
+</html>
